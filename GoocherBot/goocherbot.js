@@ -1,6 +1,10 @@
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
+var fs = require('fs');
+//General things
+var helpMessage = fs.readFileSync("./data/help.txt", { "encoding": "utf8"});
+var greetMessage = fs.readFileSync("./data/greet.txt", { "encoding": "utf8"});
 //Allow bot to send message only once a second
 var date = new Date();
 var timeSinceLastMessage = date.getTime();
@@ -33,14 +37,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !help
             case 'help':
-                var message = 'Hi, I\'m Goocher Bot!';
-                sendMessageToChannel(channelID,message);
+                sendMessageToChannel(channelID,helpMessage);
             break;
-            // Just add any case commands if you want to..
+            // !greet
+            case 'greet':
+                sendMessageToChannel(channelID,greetMessage);
+            break;
+            // !ping
             case 'ping':
                 var message = 'Pong!';
                 sendMessageToChannel(channelID,message);
-            break;
          }
      }
 });

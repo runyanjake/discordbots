@@ -2,6 +2,9 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var fs = require('fs');
+//General things
+var helpMessage = fs.readFileSync("./data/help.txt", { "encoding": "utf8"});
+var greetMessage = fs.readFileSync("./data/greet.txt", { "encoding": "utf8"});
 //bot's ready status
 var ready = true;
 //Allow bot to send message only once a second
@@ -40,27 +43,21 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !help
             case 'help':
-                var message = 'Hi Reddit, I\'m Pinner Bot! After just 450 hours playing this game I finally scored my first aerial goal! Check it out on my Youtube channel and dont forget to watch my 1 follower twitch stream!';
-                sendMessageToChannel(channelID,message);
+                sendMessageToChannel(channelID,helpMessage);
             break;
-            // Just add any case commands if you want to..
+            // !greet
+            case 'greet':
+                sendMessageToChannel(channelID,greetMessage);
+            break;
+            // !ping
             case 'ping':
                 var message = 'Pong!';
                 sendMessageToChannel(channelID,message);
             break;
+            // !thisisrocketleague
             case 'thisisrocketleague':
-	            var serverID = bot.channels[channelID].guild_id;
-	            var RLVoiceChannels = ["508436966564560903", "508436562883641354", "508436811572576256", "508437488784637965"];
-	            // for(var a = 0; a < RLVoiceChannels.length; ++a){
-	            // 	var users = bot.servers[serverID].channels[RLVoiceChannels[a]].members;
-	            // 	console.log("Channel " + RLVoiceChannels[a] + " has " + users.length);
-		           //  for(var b = 0; b < users.length; ++b){
-		           //  	var user = users[a];
-		           //  	console.log("Channel " + RLVoiceChannels[a] + " has user " + user.id);
-		            	
-		           //  }
-	            // }
-                playAudioInChannel(RLVoiceChannels[0],'./data/thisisrocketleague.mp3');
+	            var RLVoiceID = "508436966564560903";
+	            playAudioInChannel(RLVoiceID,'./data/thisisrocketleague.mp3');
             break;
         }
      }
