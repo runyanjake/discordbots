@@ -1,0 +1,3 @@
+echo Initializing Stuck in Plat Bot...
+CMD /C node ./stuckinplatbot.js
+PAUSE

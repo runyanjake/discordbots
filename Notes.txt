@@ -1,0 +1,22 @@
+IMPORTANT: it's useful to make a copy of the start batch file and put it on the desktop for convenience.
+
+Tutorial: https://www.digitaltrends.com/gaming/how-to-make-a-discord-bot/
+
+
+Link to add to server: https://discordapp.com/oauth2/authorize?&client_id=CLIENTID&scope=bot&permissions=8 < CLIENTID change to bots id
+
+
+Setting up Node.js/Running
+    
+	- nav to folder and install dependencies (gotta do this for each bot's folder idk y i did this)
+        
+		- npm install discord.io winston -save < if problems remove save flag
+, also since im not sure which discord thing i wanna do, can also add discord.js which has better documentation
+		- npm install https://github.com/woor/discord.io/tarball/gateway_v6
+    
+	- run 
+        
+		- node botname.js
+
+Bots that play audio:
+	- need some sort of audio thing, I just got ffmpeg.exe and plopped it in the folder that the js needed it from. I think it was the 'require fs' part.
