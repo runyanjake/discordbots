@@ -1,2 +1,2 @@
-My Bot Commands:
+My Bot Commands begin with `!`:
 	- none yet!

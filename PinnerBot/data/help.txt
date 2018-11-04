@@ -1,2 +1,2 @@
-My Bot Commands:
-	- none yet!
+My Bot Commands begin with `!`:
+	!thisisrocketleague - Hype up the crowd.
