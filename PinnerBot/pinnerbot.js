@@ -26,7 +26,6 @@ bot.on('ready', function (evt) {
     bot.setPresence( {game:{name:"unranked"}} );
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-    // Send new users a welcome message
     var WELCOME_CHANNEL_ID = 362748030568497173
     if(channelID == WELCOME_CHANNEL_ID){
         console.log(userID + " said " + message + " in welcome channel.");
@@ -50,8 +49,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 sendMessageToChannel(channelID,message);
             break;
             case 'thisisrocketleague':
-                var vc1 = "508436966564560903";
-                playAudioInChannel(vc1,'./data/thisisrocketleague.mp3');
+	            var serverID = bot.channels[channelID].guild_id;
+	            var RLVoiceChannels = ["508436966564560903", "508436562883641354", "508436811572576256", "508437488784637965"];
+	            // for(var a = 0; a < RLVoiceChannels.length; ++a){
+	            // 	var users = bot.servers[serverID].channels[RLVoiceChannels[a]].members;
+	            // 	console.log("Channel " + RLVoiceChannels[a] + " has " + users.length);
+		           //  for(var b = 0; b < users.length; ++b){
+		           //  	var user = users[a];
+		           //  	console.log("Channel " + RLVoiceChannels[a] + " has user " + user.id);
+		            	
+		           //  }
+	            // }
+                playAudioInChannel(RLVoiceChannels[0],'./data/thisisrocketleague.mp3');
             break;
         }
      }
