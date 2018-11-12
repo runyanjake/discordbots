@@ -19,3 +19,8 @@ cd StuckInPlatBot
 echo Initializing Stuck in Plat Bot...
 START /B startStuckInPlatBot.bat
 cd ..
+
+cd YerTroshKehdBot
+echo Initializing Yer Trosh Kehd Bot...
+START /B startYerTroshKehdBot.bat
+cd ..

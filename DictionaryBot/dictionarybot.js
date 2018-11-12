@@ -37,11 +37,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         switch(cmd) {
             // !help
             case 'help':
-                sendMessageToChannel(channelID,helpMessage);
+                sendDirectMessage(userID,helpMessage);
             break;
             // !greet
             case 'greet':
-                sendMessageToChannel(channelID,greetMessage);
+                sendDirectMessage(userID,greetMessage);
             break;
             // !ping
             case 'ping':
@@ -56,5 +56,12 @@ function sendMessageToChannel(channelID, msg, tts=false) {
                 to: channelID,
                 message: msg,
                 tts: tts
+            });
+}
+
+function sendDirectMessage(userID, msg) {
+    bot.sendMessage({
+                to: userID,
+                message: msg
             });
 }

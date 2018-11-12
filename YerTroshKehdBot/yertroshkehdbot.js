@@ -26,13 +26,9 @@ bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
-    bot.setPresence( {game:{name:"unranked"}} );
+    bot.setPresence( {game:{name:"stream sniping Ninja"}} );
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-    var WELCOME_CHANNEL_ID = 362748030568497173
-    if(channelID == WELCOME_CHANNEL_ID){
-        console.log(userID + " said " + message + " in welcome channel.");
-    }
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     if (message.substring(0, 1) == '!') {
@@ -40,7 +36,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         var cmd = args[0];
        
         args = args.splice(1);
-        var RLVoiceID = "508436966564560903";
+        var FNVoiceID = "508437079106256896";
         switch(cmd) {
             // !help
             case 'help':
@@ -55,9 +51,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 var message = 'Pong!';
                 sendMessageToChannel(channelID,message);
             break;
-            // !thisisrocketleague
-            case 'thisisrocketleague':
-	            playAudioInChannel(RLVoiceID,'./data/thisisrocketleague.mp3');
+            // !fortnite
+            case 'fortnite':
+                playAudioInChannel(FNVoiceID,'./data/fortnite.mp3');
+            // !twitchprime
+            case 'twitchprime':
+                playAudioInChannel(FNVoiceID,'./data/twitchprime.mp3');
+            // !rage
+            case 'rage':
+                playAudioInChannel(FNVoiceID,'./data/rage.mp3');
+            break;
+            // !yertrosh
+            case 'yertrosh':
+                playAudioInChannel(FNVoiceID,'./data/yertrosh.mp3');
             break;
         }
      }
@@ -68,6 +74,13 @@ function sendMessageToChannel(channelID, msg, tts=false) {
                 to: channelID,
                 message: msg,
                 tts: tts
+            });
+}
+
+function sendDirectMessage(userID, msg) {
+    bot.sendMessage({
+                to: userID,
+                message: msg
             });
 }
 
@@ -88,11 +101,4 @@ function playAudioInChannel(channelID, audioPath) {
             });
         });
     }
-}
-
-function sendDirectMessage(userID, msg) {
-    bot.sendMessage({
-                to: userID,
-                message: msg
-            });
 }

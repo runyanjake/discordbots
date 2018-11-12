@@ -1,1 +1,2 @@
 Hi, I'm GoocherBot!
+I handle useful RL commands. Type !help to see them.

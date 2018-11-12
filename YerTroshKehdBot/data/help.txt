@@ -1,0 +1,5 @@
+My Bot Commands begin with `!`:
+	!fortnite - praise the almighty fort
+	!rage - let em have it
+	!twitchprime - let the viewers know how to support you
+	!yertrosh - for when u crush a child's hopes and dreams

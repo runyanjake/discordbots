@@ -1,1 +1,2 @@
 Hi, I'm DictionaryBot!
+I help you remember words. Type !help to see commands.
