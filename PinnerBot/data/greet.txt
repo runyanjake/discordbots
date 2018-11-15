@@ -1,3 +1,3 @@
 Hi Reddit, I'm Pinner Bot!
-I handle the rocket league related voice commands. Type !help to see them.
+I handle the rocket league related voice commands. Type `!help` to see them.
 After just 450 hours playing this game I finally scored my first aerial goal! Check it out on my Youtube channel and dont forget to watch my 1 follower twitch stream!
