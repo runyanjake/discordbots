@@ -1,3 +1,4 @@
+My voice commands play in the Fortnite Normies voice channel.
 My Bot Commands begin with `!`:
 	!fortnite - praise the almighty fort
 	!rage - let em have it

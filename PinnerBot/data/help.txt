@@ -1,2 +1,3 @@
+My voice commands play in the Rocket League Normies voice channel.
 My Bot Commands begin with `!`:
 	!thisisrocketleague - Hype up the crowd.
