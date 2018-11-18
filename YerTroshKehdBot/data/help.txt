@@ -1,7 +1,10 @@
 My voice commands play in the Fortnite Normies voice channel.
 You can command me by typing in a channel, or DM-ing me commands.
 My Bot Commands begin with `!`:
+	`!comehereboi` - reel em in
 	`!fortnite` - praise the almighty fort
+	`!ooh` - ooh
 	`!rage` - let em have it
+	`!thisgamestrash` - fite me irl
 	`!twitchprime` - let the viewers know how to support you
 	`!yertrosh` - for when u crush a child's hopes and dreams

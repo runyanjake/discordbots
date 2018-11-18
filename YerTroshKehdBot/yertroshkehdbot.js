@@ -51,9 +51,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 var message = 'Pong!';
                 sendMessageToChannel(channelID,message);
             break;
+            // !comehereboi
+            case 'comehereboi':
+                playAudioInChannel(FNVoiceID,'./data/comehereboi.mp3');
             // !fortnite
             case 'fortnite':
                 playAudioInChannel(FNVoiceID,'./data/fortnite.mp3');
+            // !ooh
+            case 'ooh':
+                playAudioInChannel(FNVoiceID,'./data/ooh.mp3');
+            // !thisgamestrash
+            case 'thisgamestrash':
+                playAudioInChannel(FNVoiceID,'./data/thisgamestrash.mp3');
             // !twitchprime
             case 'twitchprime':
                 playAudioInChannel(FNVoiceID,'./data/twitchprime.mp3');
