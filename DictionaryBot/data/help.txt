@@ -1,8 +1,8 @@
 You can command me by typing in a channel, or DM-ing me commands.
-Note: Words are stored as lowercased and with spaces removed, so any string that transforms to the version shown can be used in a dictionary command. (e.g. "Rocket League" and "rocketleague" are considered the same word.
+Note: Words are stored as lowercased and with spaces removed, so any string that transforms to the version shown can be used in a dictionary command. (e.g. "Rocket League" and "rocketleague" are considered the same word. `FOR NOW ONLY SINGLE WORDS CAN BE DEFINED IN THE DICTIONARY.`
 My Bot Commands begin with `!`:
-	`!definition` - 
-	`!define` - 
-	`!redefine` - 
-	`!undefine` - 
+	`!definition [word] "[definition]"` - Defines the word [word]. PM's you for success or if anything goes wrong.
+	`!define [word]` - Define a word to the channel you make the command from.
+	`!redefine [word] "[definition]"` - Redefines the word [word].
+	`!undefine [word]` - Removes the word [word] from the dictionary.
 	`!words` - List all the words and definitions currently recorded. 
